@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "SniperFox213 <dj.gleb@list.ru>",
+  "homepage": "https://github.com/pawcapsu/monorepo#readme",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawcapsu/monorepo.git"
+  },
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/pawcapsu/monorepo/issues"
+  },
+  "dependencies": {
+    "@dormcloud/design": "^1.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

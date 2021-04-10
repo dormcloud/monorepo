@@ -1,0 +1,42 @@
+name: Deploy
+on: push
+jobs:
+  deploy:
+    name: Deploy monorepo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Bootstrap all dependencies
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      # Bootstraping dependencies
+      - run: npm ci
+      - run: lerna bootstrap
+
+      # Publish @dormcloud/design component
+      - name: Publish @dormcloud/design component to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          package: ./packages/design/package.json
+          token: ${{ secrets.NPM_TOKEN }}
+
+      # Publish @dormcloud/shared component
+      - name: Publish @dormcloud/shared component to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          package: ./packages/shared/package.json
+          token: ${{ secrets.NPM_TOKEN }}
+
+      # Deploy apps to fly.io
+
+      # App: landing
+      - name: "Deploy landing application"
+        uses: superfly/flyctl-actions@master
+        with:
+          args: "deploy packages/landing"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
