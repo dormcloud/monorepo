@@ -1,9 +1,9 @@
 {
-  "name": "@pawcapsu/shared",
+  "name": "@dormcloud/shared",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "SniperFox213 <dj.gleb@list.ru>",
-  "homepage": "https://github.com/pawcapsu/monorepo#readme",
+  "homepage": "https://github.com/dormcloud/monorepo#readme",
   "license": "ISC",
   "main": "lib/shared.js",
   "directories": {

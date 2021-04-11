@@ -24,16 +24,16 @@
   },
   "description": "> TODO: description",
   "author": "SniperFox213 <dj.gleb@list.ru>",
-  "homepage": "https://github.com/pawcapsu/monorepo#readme",
+  "homepage": "https://github.com/dormcloud/monorepo#readme",
   "license": "ISC",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pawcapsu/monorepo.git"
+    "url": "git+https://github.com/dormcloud/monorepo.git"
   },
   "bugs": {
-    "url": "https://github.com/pawcapsu/monorepo/issues"
+    "url": "https://github.com/dormcloud/monorepo/issues"
   }
 }
